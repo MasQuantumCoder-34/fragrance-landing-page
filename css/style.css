@@ -123,9 +123,11 @@ a {
 
 .main-nav a {
   font-size: 16px;
-  color: var(--text-dark);
+  color: #000000;
   font-weight: 400;
   transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
 }
 
 .main-nav a:hover,
@@ -166,6 +168,16 @@ a {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
+/* Navbar dropdown icon */
+.nav-dropdown-icon {
+  width: 16px;
+  height: 12px;
+  margin-left: 8px;
+  margin-top: 4px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
 /* ===========================
    HERO SECTION
 =========================== */
@@ -192,11 +204,11 @@ a {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: rgba(255, 255, 255, 0.75);
+  background: linear-gradient(180deg, #032E15 0%, #016630 100%);
   padding: 10px 20px;
   border-radius: 999px;
   font-size: 14px;
-  color: var(--text-dark);
+  color: var(--white);
   margin-bottom: 32px;
 }
 
@@ -349,7 +361,6 @@ a {
   cursor: pointer;
   opacity: 0.6;
   transition: all 0.3s ease;
-  border: 2px solid transparent;
 }
 
 .thumb:hover {
@@ -1006,6 +1017,10 @@ a {
 @media (max-width: 1024px) {
   .mobile-menu-toggle {
     display: flex;
+  }
+
+  .header-actions .search-btn {
+    display: none;
   }
 
   .main-nav {
