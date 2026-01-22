@@ -22,59 +22,7 @@ if (mobileMenuToggle) {
 // ==============================
 // PRODUCT IMAGE GALLERY
 // ==============================
-const images = [
-  "assets/images/product-1.png",
-  "assets/images/product-2.png",
-  "assets/images/product-3.png",
-  "assets/images/product-4.png"
-];
-
-let currentIndex = 0;
-
-const mainImage = document.querySelector(".gallery-image");
-const leftArrow = document.querySelector(".gallery-arrow.left");
-const rightArrow = document.querySelector(".gallery-arrow.right");
-const dots = document.querySelectorAll(".dot");
-const thumbs = document.querySelectorAll(".thumb");
-
-function updateGallery(index) {
-  currentIndex = index;
-  mainImage.src = images[currentIndex];
-
-  dots.forEach((dot, i) => {
-    dot.classList.toggle("active", i === currentIndex);
-  });
-
-  thumbs.forEach((thumb, i) => {
-    thumb.classList.toggle("active", i === currentIndex);
-  });
-}
-
-if (leftArrow) {
-  leftArrow.addEventListener("click", () => {
-    const newIndex = currentIndex === 0 ? images.length - 1 : currentIndex - 1;
-    updateGallery(newIndex);
-  });
-}
-
-if (rightArrow) {
-  rightArrow.addEventListener("click", () => {
-    const newIndex = currentIndex === images.length - 1 ? 0 : currentIndex + 1;
-    updateGallery(newIndex);
-  });
-}
-
-dots.forEach((dot, index) => {
-  dot.addEventListener("click", () => {
-    updateGallery(index);
-  });
-});
-
-thumbs.forEach((thumb, index) => {
-  thumb.addEventListener("click", () => {
-    updateGallery(index);
-  });
-});
+// Gallery arrows and dots are now static - no JS functionality
 
 // ==============================
 // SUBSCRIPTION EXPAND/COLLAPSE
